@@ -1,7 +1,6 @@
 package com.codecool.jpaexample.model;
 
 import javax.persistence.*;
-import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
@@ -28,7 +27,7 @@ public class Student {
     private Address address;
 
     @ManyToOne
-    private Klass klass;
+    private Module module;
 
     @ElementCollection
     @Column(name = "phone")

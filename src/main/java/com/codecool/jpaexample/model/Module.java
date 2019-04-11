@@ -5,18 +5,18 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity(name = "Class")
-public class Klass {
+public class Module {
     @Id
     private String name;
-    @OneToMany(mappedBy = "klass", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "module", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private Set<Student> students = new HashSet<>();
 
     @Enumerated(EnumType.STRING)
     private CCLocation location;
 
-    public Klass() {}
+    public Module() {}
 
-    public Klass(String name, CCLocation location) {
+    public Module(String name, CCLocation location) {
         this.name = name;
         this.location = location;
     }
